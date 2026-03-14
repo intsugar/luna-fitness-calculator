@@ -70,11 +70,23 @@ body {
 .splash-logo {
     font-size: 2.5rem;
     font-weight: 800;
+    font-style: italic;
     color: #fff;
     letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
 }
 
 .splash-logo span { color: var(--accent); }
+
+.splash-moon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -2px;
+    right: -16px;
+    transform: rotate(-30deg);
+}
 
 .splash-loader {
     display: flex;
@@ -126,10 +138,26 @@ body {
 .logo {
     font-size: 1.3rem;
     font-weight: 800;
+    font-style: italic;
     letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
 }
 
 .logo span { color: var(--accent); }
+
+.header-moon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -2px;
+    right: -12px;
+    transform: rotate(-30deg);
+}
+
+.moon-svg {
+    fill: var(--accent);
+}
 
 .theme-toggle {
     width: 42px; height: 42px;
@@ -705,10 +733,22 @@ label {
 .footer-brand {
     font-size: 1.1rem;
     font-weight: 800;
+    font-style: italic;
     margin-bottom: 6px;
+    position: relative;
+    display: inline-block;
 }
 
 .footer-brand span { color: var(--accent); }
+
+.footer-moon {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -1px;
+    right: -10px;
+    transform: rotate(-30deg);
+}
 
 .footer-author {
     font-size: 0.8rem;
