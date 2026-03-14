@@ -376,6 +376,13 @@ label {
 
 .input-wrap input::placeholder { color: var(--text-secondary); opacity: 0.5; }
 
+.input-split {
+    display: flex;
+    gap: 8px;
+}
+
+.input-split .input-wrap { flex: 1; }
+
 .input-unit {
     position: absolute;
     right: 14px;

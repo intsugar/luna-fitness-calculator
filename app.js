@@ -55,6 +55,19 @@ document.querySelectorAll('.unit-btn').forEach(btn => {
         const heightInput = document.getElementById(calc + '-height');
         if (weightInput) weightInput.placeholder = unit === 'metric' ? '70' : '154';
         if (heightInput) heightInput.placeholder = unit === 'metric' ? '175' : '69';
+
+        // BMI: swap between cm input and ft/in split
+        if (calc === 'bmi') {
+            const metricBox = document.getElementById('bmi-height-metric');
+            const imperialBox = document.getElementById('bmi-height-imperial');
+            if (unit === 'imperial') {
+                metricBox.classList.add('hidden');
+                imperialBox.classList.remove('hidden');
+            } else {
+                metricBox.classList.remove('hidden');
+                imperialBox.classList.add('hidden');
+            }
+        }
     });
 });
 
@@ -121,10 +134,21 @@ function calculateBMR() {
 
 // ========== BMI Calculator ==========
 function calculateBMI() {
-    if (!validate(['bmi-weight', 'bmi-height'])) return;
+    let heightM, weightKg;
+    if (state.units.bmi === 'imperial') {
+        if (!validate(['bmi-weight', 'bmi-feet'])) return;
+        const feet = getVal('bmi-feet') || 0;
+        const inches = getVal('bmi-inches') || 0;
+        heightM = (feet * 12 + inches) * 2.54 / 100;
+        weightKg = getVal('bmi-weight') * 0.453592;
+    } else {
+        if (!validate(['bmi-weight', 'bmi-height'])) return;
+        heightM = getVal('bmi-height') / 100;
+        weightKg = getVal('bmi-weight');
+    }
 
-    const weight = toMetric(getVal('bmi-weight'), 'weight', 'bmi');
-    const height = toMetric(getVal('bmi-height'), 'height', 'bmi') / 100;
+    const weight = weightKg;
+    const height = heightM;
 
     const bmi = weight / (height * height);
     const rounded = Math.round(bmi * 10) / 10;
