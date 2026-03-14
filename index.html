@@ -49,13 +49,13 @@
 
         <!-- Calculator Tabs -->
         <nav class="tabs" id="tabs">
-            <button class="tab active" data-calc="bmr">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
-                BMR
-            </button>
-            <button class="tab" data-calc="bmi">
+            <button class="tab active" data-calc="bmi">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
                 BMI
+            </button>
+            <button class="tab" data-calc="bmr">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+                BMR
             </button>
             <button class="tab" data-calc="bfp">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -75,13 +75,13 @@
         <main class="calculators">
 
             <!-- BMR Calculator -->
-            <section class="calc-panel active" id="calc-bmr">
+            <section class="calc-panel" id="calc-bmr">
                 <div class="calc-card">
                     <div class="calc-header">
                         <h2>BMR Calculator</h2>
                         <span class="calc-badge">Mifflin-St Jeor</span>
                     </div>
-                    <p class="calc-desc">Basal Metabolic Rate estimates the number of calories your body burns at rest — the energy needed to keep you alive.</p>
+                    <p class="calc-desc">Basal Metabolic Rate estimates the number of calories your body burns at rest, the energy needed to keep you alive.</p>
 
                     <div class="unit-toggle">
                         <button class="unit-btn active" data-unit="metric" data-calc="bmr">Metric</button>
@@ -138,7 +138,7 @@
             </section>
 
             <!-- BMI Calculator -->
-            <section class="calc-panel" id="calc-bmi">
+            <section class="calc-panel active" id="calc-bmi">
                 <div class="calc-card">
                     <div class="calc-header">
                         <h2>BMI Calculator</h2>
@@ -441,6 +441,7 @@
         <footer class="footer">
             <div class="footer-inner">
                 <div class="footer-brand">LUNA<span>.FITNESS</span></div>
+                <p class="footer-author">by Alex Luna</p>
                 <p>Professional health tools for your fitness journey</p>
                 <div class="footer-links">
                     <a href="https://lunafitness.shop" target="_blank" rel="noopener">Shop</a>

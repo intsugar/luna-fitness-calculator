@@ -703,6 +703,13 @@ label {
 
 .footer-brand span { color: var(--accent); }
 
+.footer-author {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
 .footer p {
     font-size: 0.8rem;
     color: var(--text-secondary);
