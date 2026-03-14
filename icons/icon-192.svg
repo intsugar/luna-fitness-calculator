@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="40" fill="#1a1a2e"/>
+  <text x="96" y="78" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="28" fill="#ffffff">LUNA</text>
+  <text x="96" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="#e8a918">.FITNESS</text>
+  <circle cx="145" cy="50" r="18" fill="#e8a918"/>
+  <circle cx="152" cy="43" r="14" fill="#1a1a2e"/>
+</svg>
